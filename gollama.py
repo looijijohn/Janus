@@ -15,7 +15,7 @@ def encode_image_to_base64(image_path):
         print(f"Error encoding image: {e}")
         return None
 
-def send_ollama_chat_request(image_path, model="gemma3:12b", prompt="Do you see a car(s) exists other than Parked cars on street? short answer less than 5 words"):
+def send_ollama_chat_request(image_path, model="gemma3", prompt="Do you see a car(s) exists other than Parked cars on street? short answer less than 5 words"):
     """Send a chat request to Ollama API with an image."""
     # Encode the image
     base64_image = encode_image_to_base64(image_path)
@@ -56,7 +56,7 @@ def main():
         print("Usage: python gollama.py <image_path>")
         return
     image_path = sys.argv[1]
-    response = send_ollama_chat_request(image_path)
+    response = send_ollama_chat_request(image_path) 
     
     if response:
         # Extract and print the model's response
