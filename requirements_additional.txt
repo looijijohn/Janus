@@ -1,0 +1,8 @@
+
+
+# #################
+uvicorn
+fastapi
+websockets
+
+diffusers>=0.32.0
